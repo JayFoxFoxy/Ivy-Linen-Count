@@ -4,4 +4,7 @@
     <string name="show_latest_reports">Show latest reports</string>
     <string name="exit">Exit</string>
     <string name="Create_content">Create content</string>
+    <string name="new_container">New Container</string>
+    <string name="add_a_new_one">Add a new one</string>
+    <string name="delete_a_value">Delete a value</string>
 </resources>

@@ -19,10 +19,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Button newCount = (Button) findViewById(R.id.bt1);
-        Button lastReports = (Button) findViewById(R.id.bt2);
-        Button exit = (Button) findViewById(R.id.bt3);
+        Button contain = (Button) findViewById(R.id.bt2);
+        Button lastReports = (Button) findViewById(R.id.bt3);
+        Button exit = (Button) findViewById(R.id.bt4);
 
         newCount.setOnClickListener(this);
+        contain.setOnClickListener(this);
     }
 
     @Override
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.bt2:
+                Log.d(TAG, "Container");
+                intent = new Intent(MainActivity.this,Container.class);
+                startActivity(intent);
                 break;
             case R.id.bt3:
                 break;
