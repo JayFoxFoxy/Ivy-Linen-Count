@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IvyCambridgeBrassery</string>
+    <string name="new_count">New count</string>
+    <string name="show_latest_reports">Show latest reports</string>
+    <string name="exit">Exit</string>
+    <string name="Create_content">Create content</string>
+</resources>
