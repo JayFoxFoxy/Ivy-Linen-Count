@@ -20,9 +20,9 @@ public class Container extends AppCompatActivity implements View.OnClickListener
 
     public Articles articles = new Articles();
 
-    private ArrayList<Articles> container = new ArrayList<>();
+    private static ArrayList<Articles> container = new ArrayList<>();
 
-    Button newValue, deleteValue;
+    Button newValue, deleteValue, goBack;
     EditText editText;
     TextView screen;
 
@@ -33,6 +33,7 @@ public class Container extends AppCompatActivity implements View.OnClickListener
 
         this.newValue = (Button) findViewById(R.id.bct1);
         this.deleteValue = (Button) findViewById(R.id.bct2);
+        this.goBack = (Button) findViewById(R.id.bct3);
         this.screen = (TextView) findViewById(R.id.tct1);
         this.editText = (EditText) findViewById(R.id.ect1);
 
@@ -40,6 +41,7 @@ public class Container extends AppCompatActivity implements View.OnClickListener
 
         this.newValue.setOnClickListener(this);
         this.deleteValue.setOnClickListener(this);
+        this.goBack.setOnClickListener(this);
 
     }
 
@@ -74,6 +76,10 @@ public class Container extends AppCompatActivity implements View.OnClickListener
                     alert.show();
                 }
                 break;
+            case R.id.bct3:
+                Intent intent = new Intent(Container.this,MainActivity.class);
+                startActivity(intent);
+                break;
 
         }
     }
@@ -99,4 +105,8 @@ public class Container extends AppCompatActivity implements View.OnClickListener
     public void resetEditText(){
         this.editText.setText("");
     }
+
+    public void setContainer(ArrayList<Articles> ls) { this.container = ls; }
+
+    public ArrayList<Articles> getContainer() { return this.container; }
 }

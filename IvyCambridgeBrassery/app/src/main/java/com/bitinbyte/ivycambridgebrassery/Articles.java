@@ -30,7 +30,6 @@ public class Articles {
             message += " - ";
             message += ls.get(i).getTotalNumber();
             message += "\n";
-            //System.out.println(ls.get(i).getName() + " - " + ls.get(i).getTotalNumber() + "\n");
         }
 
         return message;
