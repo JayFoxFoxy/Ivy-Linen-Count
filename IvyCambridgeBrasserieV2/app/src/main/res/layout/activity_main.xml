@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/new_count"
+        android:textAlignment="center" />
+
+    <Button
+        android:textAlignment="center"
+        android:id="@+id/bt2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Container" />
+
+    <Button
+        android:textAlignment="center"
+        android:id="@+id/bt3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/show_latest_reports" />
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/exit" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
