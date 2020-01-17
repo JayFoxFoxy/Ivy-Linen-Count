@@ -171,7 +171,8 @@ public class Container extends AppCompatActivity implements View.OnClickListener
         //SharedPreferences prefs = this.getPreferences(Container.this.getApplicationContext());
         SharedPreferences.Editor editor = prefs.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(getContainer());
+        List<Articles.ArticleModel> articles = getContainer().strem.map(Articles::toModel).collect(Collectors.toList());
+        String json = gson.toJson(articles);
         editor.putString("container", json);
         editor.apply();
         editor.commit();
