@@ -13,6 +13,21 @@ import java.util.ArrayList;
 import static android.app.AlertDialog.*;
 
 public class Articles extends AppCompatActivity {
+    
+    public static class ArticleModel
+    {
+        private final String name;
+        private final int totalNumber;
+
+         ArticleModel(String name, int totalNumber)
+         {
+            this.name = name;
+            this.totalNumber = number;
+         }
+
+        public String getName() { return name; }
+        public int totalNumber() { return totalNumber; }
+    }
 
     private String name;
     private int totalNumber;
@@ -87,6 +102,11 @@ public class Articles extends AppCompatActivity {
         }
 
         return ls;
+    }
+    
+    public ArticleModel toModel()
+    {
+        return new ArticleModel(name, totalNumber);
     }
 
     public org.json.JSONObject getJSONObject() {
